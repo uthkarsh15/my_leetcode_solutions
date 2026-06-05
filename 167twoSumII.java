@@ -1,5 +1,5 @@
 // brute force solution
-class Solution {
+class Solution1 {
     public int[] twoSum(int[] numbers, int target) {
         int n = numbers.length;
         for(int i=0; i<n-1; i++){
@@ -14,7 +14,7 @@ class Solution {
 }
 
 // sub-optimal solution using hash map
-class Solution {
+class Solution2 {
     public int[] twoSum(int[] numbers, int target) {
         int n = numbers.length;
         HashMap<Integer, Integer> map = new HashMap<>();
@@ -31,7 +31,7 @@ class Solution {
 }
 
 // optimal solution using two pointer approach
-class Solution {
+class Solution3 {
     public int[] twoSum(int[] numbers, int target) {
         int n = numbers.length;
         int i = 0;
