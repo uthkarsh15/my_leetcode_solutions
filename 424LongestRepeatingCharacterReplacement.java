@@ -21,3 +21,25 @@ class Solution {
         return n-left;
     }
 }
+
+
+// optimized solution without using HashMap
+class Solution2 {
+    public int characterReplacement(String s, int k) {
+        int n = s.length();
+        int left=0;
+        int maxFreq = 0;
+        int freq[] = new int[26];
+        for(int right=0; right<n; right++){
+            int rightCharIdx = s.charAt(right) - 'A';
+            freq[rightCharIdx]++;
+            maxFreq = Math.max(maxFreq, freq[rightCharIdx]);
+            if((right-left+1)-maxFreq > k){
+                int leftCharIdx = s.charAt(left) - 'A';
+                freq[leftCharIdx]--;
+                left++;
+            }
+        }
+        return n-left;
+    }
+}
