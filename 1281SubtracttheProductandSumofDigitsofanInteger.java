@@ -1,3 +1,4 @@
+import java.util.*;
 class Solution {
     public int subtractProductAndSum(int n) {
         int product = 1;
